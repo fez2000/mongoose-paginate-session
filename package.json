@@ -1,6 +1,6 @@
 {
   "name": "mongoose-paginate-session",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom pagination library for Mongoose with customizable labels.",
   "main": "dist/index.js",
   "types": "index.d.ts",
@@ -49,6 +49,7 @@
   ],
   "author": "fez2000 <eugenefezeu@gmail.com> (https://nextstep.cm)",
   "contributors": [
+    "Aravind NC <aravind_n_c@yahoo.co.in> (https://aravindnc.com)",
     "Fernando López Guevara (fernando.lguevara@gmail.com)"
   ],
   "license": "MIT",
