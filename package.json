@@ -1,6 +1,6 @@
 {
-  "name": "mongoose-paginate-v2",
-  "version": "1.7.0",
+  "name": "mongoose-paginate-session",
+  "version": "1.0.0",
   "description": "A custom pagination library for Mongoose with customizable labels.",
   "main": "dist/index.js",
   "types": "index.d.ts",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aravindnc/mongoose-paginate-v2.git"
+    "url": "git+https://github.com/fez2000/mongoose-paginate-session.git"
   },
   "keywords": [
     "mongoose",
@@ -44,17 +44,18 @@
     "total",
     "paginator",
     "plugin",
+    "session",
     "helper"
   ],
-  "author": "Aravind NC <aravind_n_c@yahoo.co.in> (https://aravindnc.com)",
+  "author": "fez2000 <eugenefezeu@gmail.com> (https://nextstep.cm)",
   "contributors": [
     "Fernando López Guevara (fernando.lguevara@gmail.com)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aravindnc/mongoose-paginate-v2/issues"
+    "url": "https://github.com/fez2000/mongoose-paginate-session/issues"
   },
-  "homepage": "https://github.com/aravindnc/mongoose-paginate-v2#readme",
+  "homepage": "https://github.com/fez2000/mongoose-paginate-session#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",

@@ -1,6 +1,7 @@
 class PaginationParametersHelper {
-  constructor(request) {
+  constructor(request, session = null) {
     this.query = request.query;
+    this.session = session;
   }
 
   /**
@@ -87,6 +88,7 @@ class PaginationParametersHelper {
       mongooseOptions = this.query.options;
 
     // For every option that is set, add it to the 'options' object-literal
+    if (this.session) options['session'] = this.session;
     if (select) options['select'] = this.optObjectOrString(select);
     if (collation) options['collation'] = this.optObjectOrString(collation);
     if (sort) options['sort'] = this.optObjectOrString(sort);

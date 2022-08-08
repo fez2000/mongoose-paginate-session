@@ -12,7 +12,7 @@
 
 If you are looking for aggregate query pagination, use this one [mongoose-aggregate-paginate-v2](https://github.com/aravindnc/mongoose-aggregate-paginate-v2)
 
-[![NPM](https://nodei.co/npm/mongoose-paginate-v2.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mongoose-paginate-v2)
+[![NPM](https://nodei.co/npm/mongoose-paginate-v2.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mongoose-paginate-session)
 
 ## Why This Plugin
 
@@ -23,7 +23,7 @@ The below documentation is not perfect. Feel free to contribute. :)
 ## Installation
 
 ```sh
-npm install mongoose-paginate-v2
+npm install mongoose-paginate-session
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ Add plugin to a schema and then use model `paginate` method:
 
 ```js
 const mongoose = require('mongoose');
-const mongoosePaginate = require('mongoose-paginate-v2');
+const mongoosePaginate = require('mongoose-paginate-session');
 
 const mySchema = new mongoose.Schema({
   /* your schema definition */
@@ -53,7 +53,7 @@ To declare a `PaginateModel` in your Typescript files:
 
 ```ts
 import mongoose from 'mongoose';
-import paginate from 'mongoose-paginate-v2';
+import paginate from 'mongoose-paginate-session';
 
 // declare your schema
 export const institutionSchema = new mongoose.Schema({ name: String });
@@ -205,7 +205,7 @@ Model.paginate({}, options, function (err, result) {
 For conveniently passing on all request query parameters into paginate(), without having to specify them all in the controller, you can use the PaginationParameters-class. The example below is with express.js code, but can be applied to any request, where the query string has been parsed into an object.
 
 ```javascript
-const { PaginationParameters } = require('mongoose-paginate-v2');
+const { PaginationParameters } = require('mongoose-paginate-session');
 
 // req.query = {
 //   page: 1,
@@ -254,6 +254,7 @@ var options = {
   select: 'title date author',
   sort: { date: -1 },
   populate: 'author',
+  session: null,
   lean: true,
   offset: 20,
   limit: 10,
@@ -281,7 +282,7 @@ Model.paginate({}, { limit: 0 }).then(function (result) {
 config.js:
 
 ```javascript
-var mongoosePaginate = require('mongoose-paginate-v2');
+var mongoosePaginate = require('mongoose-paginate-session');
 
 mongoosePaginate.paginate.options = {
   lean: true,

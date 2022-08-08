@@ -8,6 +8,7 @@
  * @param {Object|String}       [options.customLabels]
  * @param {Object}              [options.collation]
  * @param {Array|Object|String} [options.populate]
+ * @param {Object} [options.session=null]
  * @param {Boolean}             [options.lean=false]
  * @param {Boolean}             [options.leanWithId=true]
  * @param {Number}              [options.offset=0] - Use offset or page to set skip position
@@ -64,6 +65,7 @@ function paginate(query, options, callback) {
     lean,
     leanWithId,
     populate,
+    session,
     projection,
     read,
     select,
@@ -155,6 +157,9 @@ function paginate(query, options, callback) {
 
     if (populate) {
       mQuery.populate(populate);
+    }
+    if (session) {
+      mQuery.session(session);
     }
 
     mQuery.select(select);

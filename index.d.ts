@@ -22,6 +22,7 @@ declare module 'mongoose' {
     select?: object | string | undefined;
     collation?: import('mongodb').CollationOptions | undefined;
     sort?: object | string | undefined;
+    session?: object | undefined;
     populate?:
     | PopulateOptions[]
     | string[]
