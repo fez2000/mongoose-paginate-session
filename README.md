@@ -1,5 +1,3 @@
-![Banner](static/banner.jpg)
-
 # mongoose-paginate-session
 
 > A custom pagination library for [Mongoose](http://mongoosejs.com) with customizable labels.
