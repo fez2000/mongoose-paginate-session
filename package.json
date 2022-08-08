@@ -1,6 +1,6 @@
 {
   "name": "mongoose-paginate-session",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A custom pagination library for Mongoose with customizable labels.",
   "main": "dist/index.js",
   "types": "index.d.ts",
